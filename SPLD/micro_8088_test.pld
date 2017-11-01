@@ -1,0 +1,37 @@
+GAL16V8    ;  Works with GAL16V8B and ATF16V8B
+M8088_T1   ;  Micro 8088, Test version 1
+
+Clock	SW1	SW2	SW3	A16	A17	A18	A19	A15	GND
+/OE	ROMCS	RAMCS2	SPKR	SPKROUT	RAMENA	SW4	SW5	Q	VCC
+
+/SPKROUT =  SPKR
+
+/RAMCS2 =    A19 * /A18 * /A17
+          + /SW1 *  A19 *  A18 * /A17 * /A16 * /A15
+          + /SW2 *  A19 *  A18 * /A17 * /A16 *  A15
+          + /SW3 *  A19 *  A18 * /A17 *  A16 * /A15
+          + /SW4 *  A19 *  A18 * /A17 *  A16 *  A15
+          + /SW5 *  A19 *  A18 *  A17 * /A16
+
+/RAMENA =   /A19
+          + /RAMCS2
+
+/ROMCS  =    A19 *  A18 *  A17 *  A16
+
+Q.R = /Q
+
+DESCRIPTION
+
+This is the memory address decode logic for Micro 8088 processor board.
+It implements the following functions:
+1. Inverter for PC speaker. SPKR is the input and SPKROUT is the output
+2. Chip select logic for the second SRAM. RAMCS2 signal activated for
+   higher 128 KiB of 640 KiB base memory - 0x80000-0x9FFFF address range.
+   It also can be activated for UMB addresses, and that is configured
+   using SW1-SW5 inputs.
+3. RAM enable signal - RAMENA. This signal is activated for any SRAM access,
+   and used to enable the data bus transceiver between SRAM and ISA bus.
+4. Chip select logic for Flash ROM - ROMCS. This signal is activated for any
+   accesses to 0xF0000-0xFFFFF address range.
+5. A simple frequency divider by 2, using Clock input and Q output.
+   This frequency divider can be used for test purposes.

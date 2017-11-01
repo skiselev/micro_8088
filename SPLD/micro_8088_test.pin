@@ -1,0 +1,25 @@
+
+
+ Pin # | Name     | Pin Type
+-----------------------------
+   1   | Clock    | Clock
+   2   | SW1      | Input
+   3   | SW2      | Input
+   4   | SW3      | Input
+   5   | A16      | Input
+   6   | A17      | Input
+   7   | A18      | Input
+   8   | A19      | Input
+   9   | A15      | Input
+  10   | GND      | GND
+  11   | /OE      | /OE
+  12   | ROMCS    | Output
+  13   | RAMCS2   | Output
+  14   | SPKR     | Input
+  15   | SPKROUT  | Output
+  16   | RAMENA   | Output
+  17   | SW4      | Input
+  18   | SW5      | Input
+  19   | Q        | Output
+  20   | VCC      | VCC
+
