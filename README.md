@@ -116,14 +116,22 @@ Port 63h bit | Function
   * When using 14.31818 MHz crystal (XSEL pin is pulled up), setting bit 7 switches CPU clock frequency to 4.77 MHz, regardless of bit 6
   * When using 14.31818 MHz crystal (XSEL pin is pulled up)
   * It appears that CPU clock duty cycle is 50% (excluding 4.77 MHz setting with 28.63636 MHz crystal, where duty cycle is 33%). This potentially can cause issues with some 8088 CPUs.
+  
+## Changes - Version 1.0
+* Initial version
 
 ## Known Issues - Version 1.0
-* System does not boot with NEC V20 CPU. Might be a BIOS related issue
+* System does not boot with NEC V20 CPU.
+  * This is confirmed to be due to a Phoenix BIOS issue (BIOS image from Intel Wildcard 88)
+  * Xi 8088 BIOS is currently work in progress, and it doesn't suffer from this issue
 * AS6C1008 (U6) does not have TTL compatible inputs causing instability with 640 KiB memory configruation
-  * Workaround use CMOS transceiver U11, e.g. 74AHCT245
+  * Workaround: use CMOS transceiver U11, e.g. 74AHCT245
+* DMA doesn't work properly.
+  * This is due to A8-A11 address lines not beight latched.
+  * Workaround: add a 74F573 latch, and connect AA8-AA11 and A8-AA11 through it
 
 ## TODO List - Version 1.0
 - [x] Test with 14.31818 MHz and 28.63636 MHz crystals
 - [x] Test 512 KiB and 640 KiB memory configuration
 - [ ] Port Xi 8088 BIOS to Micro 8088
-- [ ] Test with CMOS buffers, latches, and transceivers
+- [x] Test with CMOS buffers, latches, and transceivers
