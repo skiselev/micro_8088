@@ -9,7 +9,7 @@ The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements
 
 ## Specifications
 * Processor: Intel 8088 or compatible, NEC V20
-  * Supports IBM PC/XT standard 4.77 MHz CPU frequency, and (when using FE2010A chipset) 7.16 MHz and 9.54 MHz CPU frequencies
+  * Supports IBM PC/XT standard 4.77 MHz CPU frequency and, when using FE2010A chipset, 7.16 MHz and 9.54 MHz CPU frequencies
 * Coprocessor: Intel 8087
 * Faraday FE2010/FE2010A chipset, implementing the following components:
   * One 8237 direct memory access controller (DMAC)
@@ -34,18 +34,18 @@ The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements
 
 Component type    	| Reference | Description                       | Quantity | Possible sources and notes 
 ------------------ | --------- | --------------------------------- | -------- | --------------------------
-PCB                |           | Micro 8080 PCB - Version 1.0      | 1        | Order from [OSH Park](https://oshpark.com/shared_projects/H4fbhjaD)
+PCB                |           | Micro 8080 PCB - Version 1.1      | 1        | Check availability on the [RetroBrew Computers Board Inventory](https://retrobrewcomputers.org/doku.php?id=boardinventory#xi_8088_project_sergey_kiselev) page, or order from a PCB manufacturer of your choice using provided Gerber or KiCad files
 Integrated Circuit | U1        | Intel 8088, 80C88, or NEC V20 CPU | 1        | eBay, Mouser (expensive) - [968-IP80C88-2](https://www.mouser.com/Search/ProductDetail.aspx?R=IP80C88-2virtualkey57760000virtualkey968-IP80C88-2)
 Integrated Circuit | U2        | Intel 8087 FPU                    | 1        | Optional, eBay
 Integrated Circuit | U3        | Faraday FE2010A                   | 1        | eBay
-Integrated Circuit | U4        | SST39SF010A Flash ROM, DIP-32 package | 1    | Mouser
+Integrated Circuit | U4        | SST39SF010A Flash ROM, DIP-32 package | 1    | Mouser [804-39SF010A7CPHE](https://www.mouser.com/Search/ProductDetail.aspx?R=SST39SF010A-70-4C-PHEvirtualkey57940000virtualkey804-39SF010A7CPHE)
 Integrated Circuit | U5, U6    | AS6C4008 SRAM, DIP-32 package     | 2        | Mouser [913-AS6C4008-55PCN](https://www.mouser.com/Search/ProductDetail.aspx?R=AS6C4008-55PCNvirtualkey56240000virtualkey913-AS6C4008-55PCN)
-Integrated Circuit | U7 - U9   | 74F573 Octal D-Type Latch         | 3        | Mouser
-Integrated Circuit | U10, U11  | 74F245 Octal Bus Transceiver      | 2        | Mouser
-Integrated Circuit | U12, U13  | 74F244 Octal Buffer               | 2        | Mouser
-Integrated Circuit | U14       | 74F00 Quad 2-Input NAND Gate      | 1        | Optional - install either U14 or U16. Mouser
+Integrated Circuit | U7 - U9   | 74F573 Octal D-Type Latch         | 3        | Mouser [595-SN74F573N](https://www.mouser.com/Search/ProductDetail.aspx?R=SN74F573Nvirtualkey59500000virtualkey595-SN74F573N)
+Integrated Circuit | U10, U11  | 74F245 Octal Bus Transceiver      | 2        | Mouser [595-SN74F245N](https://www.mouser.com/Search/ProductDetail.aspx?R=SN74F245Nvirtualkey59500000virtualkey595-SN74F245N)
+Integrated Circuit | U12, U13  | 74F244 Octal Buffer               | 2        | Mouser [595-SN74F244N](https://www.mouser.com/Search/ProductDetail.aspx?R=SN74F244Nvirtualkey59500000virtualkey595-SN74F244N)
+Integrated Circuit | U14       | 74F00 Quad 2-Input NAND Gate      | 1        | Optional - install either U14 or U16. Mouser [595-SN74F00](https://www.mouser.com/Search/ProductDetail.aspx?R=SN74F00Nvirtualkey59500000virtualkey595-SN74F00N)
 Integrated Circuit | U15       | PIC12F629 Microcontroller         | 1        | Mouser [PIC12F629-I-P](https://www.mouser.com/Search/ProductDetail.aspx?R=PIC12F629-I%2fPvirtualkey57940000virtualkey579-PIC12F629IP)
-Integrated Circuit | U16       | ATF16V8B SPLD                     | 1        | Optional - install either U14 or U16. Mouser
+Integrated Circuit | U16       | ATF16V8B SPLD                     | 1        | Optional - install either U14 or U16. Mouser [556-AF16V8B15PU](https://www.mouser.com/Search/ProductDetail.aspx?R=ATF16V8B-15PUvirtualkey55660000virtualkey556-AF16V8B15PU)
 IC Socket          | U1, U2    | DIP-40, 600 mil socket            | 2        | Mouser [517-4840-6000-CP](https://www.mouser.com/Search/ProductDetail.aspx?R=4840-6000-CPvirtualkey51750000virtualkey517-4840-6000-CP)
 IC Socket          | U3        | PLCC-84 through hole socket       | 1        | Mouser [517-8484-11B1-RK-TP](https://www.mouser.com/Search/ProductDetail.aspx?R=8484-11B1-RK-TPvirtualkey51750000virtualkey517-8484-11B1-RK-TP)
 IC Socket          | U4-U6     | DIP-32, 600 mil socket            | 3        | Mouser [517-4832-6000-CP](https://www.mouser.com/Search/ProductDetail.aspx?R=4832-6000-CPvirtualkey51750000virtualkey517-4832-6000-CP)
@@ -55,18 +55,18 @@ IC Socket          | U15       | DIP-8, 300 mil socket             | 1        | 
 Diode              | D1        | 1N4148                            | 1        | Mouser [512-1N4148](https://www.mouser.com/Search/ProductDetail.aspx?R=1N4148virtualkey51210000virtualkey512-1N4148)
 LED                | D2        | 3 mm, green LED indicator         | 1        | Mouser [LTL-4231NHBP](https://www.mouser.com/Search/ProductDetail.aspx?R=LTL-4231NHBPvirtualkey57820000virtualkey859-LTL-4231NHBP)
 Transistor         | Q1        | PN2222A, 2.54mm lead spacing      | 1        | Mouser [512-PN2222ATA](https://www.mouser.com/Search/ProductDetail.aspx?R=PN2222ATAvirtualkey51210000virtualkey512-PN2222ATA)
-Crystal            | X1        | 28.63636 MHz, 18 pF, HC-49/S      | 1        | Mouser [717-9B-28.63636MEEJB](https://www.mouser.com/Search/ProductDetail.aspx?R=9B-28.63636MEEJ-Bvirtualkey57230000virtualkey717-9B-28.63636MEEJB)
+Crystal            | X1        | 28.63636 MHz, 18 pF, HC-49/S      | 1        | Mouser [717-9B-28.63636MAAJB](https://www.mouser.com/Search/ProductDetail.aspx?R=9B-28.63636MAAJ-Bvirtualkey57230000virtualkey717-9B-28.63636MAAJB)
 Speaker            | SP1       | 12 mm speaker                     | 1        | Mouser [665-AT-1224TWTR](https://www.mouser.com/Search/ProductDetail.aspx?R=AT-1224-TWT-Rvirtualkey66500000virtualkey665-AT-1224TWTR)
 Tactile Button     | SW1       | 6 mm tactile button, right angle  | 1        | Mouser [653-B3F-3152](https://www.mouser.com/Search/ProductDetail.aspx?R=B3F-3152virtualkey65300000virtualkey653-B3F-3152)
-DIP Switch         | SW2       | 3 positions                       | 1        | Mouser
-DIP Switch         | SW3       | 5 positions                       | 1        | Mouser
+DIP Switch         | SW2       | 3 positions                       | 1        | Mouser [774-2063](https://www.mouser.com/Search/ProductDetail.aspx?R=206-3virtualkey67110000virtualkey774-2063)
+DIP Switch         | SW3       | 5 positions                       | 1        | Mouser [774-2065](https://www.mouser.com/Search/ProductDetail.aspx?R=206-5virtualkey67110000virtualkey774-2065)
 Connector          | P1        | 6 pin Mini DIN, purple            | 1        | Mouser [806-KMDGX-6S-BS2715C](https://www.mouser.com/Search/ProductDetail.aspx?R=KMDGX-6S-BS2715Cvirtualkey51700000virtualkey806-KMDGX-6S-BS2715C)
 Pin Header         | P2, JP3-JP4 | 4 pin header, 2.54 mm pitch     | 2        | Mouser [649-68002-104HLF](https://www.mouser.com/Search/ProductDetail.aspx?R=68002-104HLFvirtualkey64910000virtualkey649-68002-104HLF)
 Pin Header         | P3, JP1-JP2 | 2 pin header, 2.54 mm pitch     | 3        | Mouser [649-68002-102HLF](https://www.mouser.com/Search/ProductDetail.aspx?R=68002-102HLFvirtualkey64910000virtualkey649-68002-102HLF)
 Capacitor          | C1 - C17  | 0.1 uF, MLCC, 5 mm lead spacing   | 17       | Mouser [594-K104K15X7RF53H5](https://www.mouser.com/Search/ProductDetail.aspx?R=K104K15X7RF53H5virtualkey59420000virtualkey594-K104K15X7RF53H5)
 Capacitor          | C18 - C20 | 10 uF, MLCC, 5 mm lead spacing    | 3        | Mouser [810-FG24X7R1A106KRT0](https://www.mouser.com/Search/ProductDetail.aspx?R=FG24X7R1A106KRT00virtualkey52130000virtualkey810-FG24X7R1A106KRT0)
 Trimmer Capacitor  | C21       | 6.5-30 pF, 5 mm lead spacing      | 3        | Mouser [659-GKG30015](https://www.mouser.com/Search/ProductDetail.aspx?R=GKG30015virtualkey65900000virtualkey659-GKG30015)
-Capacitor          | C22       | 47 pF, MLCC, 5 mm lead spacing    | 1        | Mouser [810-FG28C0G1H470JNT0](https://www.mouser.com/Search/ProductDetail.aspx?R=FG28C0G1H470JNT00virtualkey52130000virtualkey810-FG28C0G1H470JNT0)
+Capacitor          | C22       | 47 pF, MLCC, 5 mm lead spacing    | 1        | Mouser [75-1C20C0G470J050B](https://www.mouser.com/Search/ProductDetail.aspx?R=1C20C0G470J050Bvirtualkey61320000virtualkey75-1C20C0G470J050B)
 Capacitor          | C23       | 0.01 uF, MLCC, 5 mm lead spacing  | 1        | Mouser [594-K103K15X7RH5TH5](https://www.mouser.com/Search/ProductDetail.aspx?R=K103K15X7RH5TH5virtualkey59420000virtualkey594-K103K15X7RH5TH5)
 Resistor Array     | RR1       | 4.7 k, bussed, 10 pin SIP         | 1        | Mouser [266-4.7K-RC](https://www.mouser.com/Search/ProductDetail.aspx?R=266-4.7K-RCvirtualkey21980000virtualkey266-4.7K-RC)
 Resistor Array     | RR2       | 10 k, bussed, 10 pin SIP          | 1        | Mouser [266-10K-RC](https://www.mouser.com/Search/ProductDetail.aspx?R=266-10K-RCvirtualkey21980000virtualkey266-10K-RC)
