@@ -133,6 +133,8 @@ Port 63h bit | Function
   * Initial version
 
 ## Known Issues
+* Version 1.1
+  * JP2 description on the back silkscreen suggests that the default JP2 position is *Open*. Since the recommended chipset is FE2010A and the recommended crystal frequency is 28.63636 MHz, the default JP2 position should be *Closed*
 * Version 1.0
   * System does not boot with NEC V20 CPU.
     * This is confirmed to be due to a Phoenix BIOS issue (BIOS image from Intel Wildcard 88)
