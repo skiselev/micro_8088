@@ -3,8 +3,8 @@
  Pin # | Name     | Pin Type
 -----------------------------
    1   | Clock    | Clock
-   2   | SW1      | Input
-   3   | SW2      | Input
+   2   | SW5      | Input
+   3   | SW4      | Input
    4   | SW3      | Input
    5   | A16      | Input
    6   | A17      | Input
@@ -18,8 +18,8 @@
   14   | SPKR     | Input
   15   | SPKROUT  | Output
   16   | RAMENA   | Output
-  17   | SW4      | Input
-  18   | SW5      | Input
+  17   | SW2      | Input
+  18   | SW1      | Input
   19   | Q        | Output
   20   | VCC      | VCC
 

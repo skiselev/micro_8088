@@ -10,7 +10,7 @@ Pin 19 = NC           XOR = 0   AC1 = 0
   6  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   7  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 18 = SW5          XOR = 0   AC1 = 1
+Pin 18 = SW1          XOR = 0   AC1 = 1
   8  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   9  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  10  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -20,7 +20,7 @@ Pin 18 = SW5          XOR = 0   AC1 = 1
  14  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  15  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 17 = SW4          XOR = 0   AC1 = 1
+Pin 17 = SW2          XOR = 0   AC1 = 1
  16  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  17  xxxx xxxx xxxx xxxx xxxx ---- ---- ---- ---- ---- ----
  18  ---- ---- ---- ---- ---- ---- ---- ---- -x-- ---- ----
@@ -45,10 +45,10 @@ Pin 15 = SPKROUT      XOR = 0   AC1 = 1
  33  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  34  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx ----
  35  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 36  -x-- -x-- x--- ---- -x-- ---- ---- -x-- -x-- x--- x---
- 37  -x-- ---- -x-- ---- -x-- -x-- x--- x--- x--- ---- ----
- 38  -x-- x--- -x-- x--- x--- -x-- ---- ---- ---x x--- -x--
- 39  x--- x--- x--- ---- ---x ---- -x-- x--- x--- x--- ----
+ 36  -x-- -x-- x--- ---- ---- ---x ---- -x-- -x-- x--- x---
+ 37  -x-- ---- ---- ---x -x-- -x-- x--- x--- x--- ---- ----
+ 38  -x-- x--- -x-- x--- x--- -x-- ---- -x-- ---- x--- -x--
+ 39  x--- x--- x--- -x-- ---- ---- -x-- x--- x--- x--- ----
 
 Pin 14 = SPKR         XOR = 0   AC1 = 1
  40  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx ---- ---- ----
