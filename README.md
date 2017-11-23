@@ -5,7 +5,7 @@ IBM XT Compatible Processor Board based on Faraday FE2010 chipset
 This project is an attempt to create a simple to build IBM PC/XT compatible processor board.
 The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements most of IBM PC/XT LSIs (Intel 8xxx ICs) and glue logic.
 
-![Micro 8088 V1.0 Assembled Board](images/Micro_8088_Assembled_Board-1.0.jpg)
+![Micro 8088 V1.1 Assembled Board](images/Micro_8088_Assembled_Board-1.1.jpg)
 
 ## Specifications
 * Processor: Intel 8088 or compatible, NEC V20
