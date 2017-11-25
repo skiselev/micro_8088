@@ -11,7 +11,7 @@ The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements
 * Processor: Intel 8088 or compatible, NEC V20
   * Supports IBM PC/XT standard 4.77 MHz CPU frequency and, when using FE2010A chipset, 7.16 MHz and 9.54 MHz CPU frequencies
 * Coprocessor: Intel 8087
-* Faraday FE2010/FE2010A chipset, implementing the following components:
+* [Faraday FE2010/FE2010A](Documentation/Faraday-XT_Controller-FE2010.pdf) chipset, implementing the following components:
   * One 8237 direct memory access controller (DMAC)
   * One 8259 programmable interrupt controller (PIC)
   * One 8254 programmable interval timer (PIT)
