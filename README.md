@@ -212,9 +212,9 @@ Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/serg
 #### Turbo Mode Switching
 
 The BIOS keyboard handler uses the following key combinations to switch the CPU clock frequency:
-* <Ctrl>-<Alt>-<Keypad -> - Normal 4.77 MHz CPU clock frequency
-* <Ctrl>-<Alt>-<Keypad *> - Turbo 7.16 MHz CPU clock frequency
-* <Ctrl>-<Alt>-<Keypad +> - Turbo 9.55 MHz CPU clock frequency (works only on systems with 26.63636 MHz X1 crystal)
+* **Ctrl-Alt-Keypad -** - Normal 4.77 MHz CPU clock frequency
+* **Ctrl-Alt-Keypad \*** - Turbo 7.16 MHz CPU clock frequency
+* **Ctrl-Alt-Keypad +** - Turbo 9.55 MHz CPU clock frequency (works only on systems with 26.63636 MHz X1 crystal)
 
 Note that the BIOS does not, and possibly can not check if the installed CPU and the FPU are actually capable of running at higher clock frequencies. Turning on the turbo mode in a system with 5 MHz CPU can make it unstable.
 
