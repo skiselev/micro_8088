@@ -30,6 +30,88 @@ The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements
 
 [PCB Layout - Version 1.1](KiCad/8088-FE2010A-SBC-Board-1.1.pdf)
 
+### Jumpers, Connectors, and Switches
+
+#### P1 - PS/2 Keyboard
+Pin | Description
+--- | -----------
+1   | Keyboard data
+2   |	Unused
+3   |	GND
+4   |	+5V
+5   |	Keyboard clock
+6   |	Unused
+
+#### P2 - Speaker
+Pin | Description
+--- | -----------
+1   | Speaker output
+2   | Internal Speaker input*
+3   | Unused
+4   |	+5V
+
+*Note: To enable internal speaker connect a jumper across pins 1-2*
+
+#### P3 - Reset Switch
+Pin | Description
+--- | -----------
+1   | Reset input
+2   | Ground
+
+#### JP1 - Select Flash ROM area mapped to 0xF0000-0xFFFFF
+Position | Description
+-------- | -----------
+*open (default)* | Map lower 64 KiB of the Flash ROM to 0xF0000-0xFFFFF
+closed   | Map upper 64 KiB of the Flash ROM to 0xF0000-0xFFFFF
+
+#### JP2 - Select X1 Crystal Frequency
+Position | Description
+-------- | -----------
+open     | Use 14.31818 MHz crystal
+*closed (default)* | Use 28.63636 MHz crystal
+
+*Note: 14.31818 MHz crystal supports 4.77 MHz and 7.16 MHz CPU clock frequencies; 28.63636 MHz crystal additionally supports 9.55 MHz CPU clock frequency*
+
+#### JP3 - RAM Chip Select Source
+Position | Description
+-------- | -----------
+*open (default)* | Use SPLD (U16)
+closed   | Use FE2010A (U3)
+
+*Note: FE2010A only generates RAM chip select for the base RAM (lower 640 KiB). It does not generate RAM chip select for UMBs, and therefore SPLD (U16) is required to implement UMBs*
+
+#### JP4 - Flash ROM Chip Select Source
+Position | Description
+-------- | -----------
+*open (default)* | Use SPLD (U16)
+closed   | Use FE2010A (U3)
+
+*Note: FE2010A does not generate chip select for memory write cycles, therefore it does not support in-system BIOS upgrades*
+
+#### SW1 - Reset Switch
+Press SW1 to reset the system
+
+#### SW2 - System Configuration
+Position	| Description
+-------- | -----------
+SW2.1 = OFF, SW2.2 = OFF | MDA or Hercules
+SW2.1 = ON, SW2.2 = OFF  | CGA, 80x25
+SW2.1 = OFF, SW2.2 = ON  | CGA, 40x25
+SW2.1 = ON, SW2.2 = ON   | None, EGA, or VGA
+SW2.3 = OFF | Disable keyboard 0xE0 scan code pass through
+SW2.3 = ON | Enable keyboard 0xE0 scan code pass through
+
+#### SW3 - UMB Configuration
+Position	| Description
+-------- | -----------
+SW3.1 = ON | Map 0xC0000-0xC7FFF to RAM 
+SW3.2 = ON | Map 0xC8000-0xCFFFF to RAM 
+SW3.3 = ON | Map 0xD0000-0xD7FFF to RAM 
+SW3.4 = ON | Map 0xD8000-0xDFFFF to RAM 
+SW3.5 = ON | Map 0xE0000-0xEFFFF to RAM
+
+*Note: SPLD (U16) is required to implement UMBs. This switch is not used in systems without SPLD*
+
 ### Bill of Materials - Version 1.1
 
 [Project on Mouser.com](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=57e2f0df1d) - View and order all components except of the Faraday FE2010A chipset, and the PCB.
