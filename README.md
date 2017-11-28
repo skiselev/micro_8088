@@ -205,17 +205,26 @@ Port 63h bit | Function
 
 ## Firmware Documentation
 
-### SPLD Fuse Maps
-
-An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, and implements Flash ROM write access. The fuse maps for the SPLD are provided in **SPLD** directory of this repository. The [SPLD/micro_8088_prod.jed](SPLD/micro_8088_prod.jed) fuse map should be used for production applications.
-
 ### System BIOS
 
 Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) BIOS. The BIOS binary images are provided in **BIOS** directory. The BIOS source code is available in [8088_bios GitHub repository](https://github.com/skiselev/8088_bios/tree/micro_8088)
 
+#### Turbo Mode Switching
+
+The BIOS keyboard handler uses the following key combinations to switch the CPU clock frequency:
+* <Ctrl>-<Alt>-<Keypad -> - Normal 4.77 MHz CPU clock frequency
+* <Ctrl>-<Alt>-<Keypad *> - Turbo 7.16 MHz CPU clock frequency
+* <Ctrl>-<Alt>-<Keypad +> - Turbo 9.55 MHz CPU clock frequency (works only on systems with 26.63636 MHz X1 crystal)
+
+Note that the BIOS does not, and possibly can not check if the installed CPU and the FPU are actually capable of running at higher clock frequencies. Turning on the turbo mode in a system with 5 MHz CPU can make it unstable.
+
 ### AT2XT Firmware
 
 Micro 8088 integrates an AT2XT keyboard converter, implemented using PIC12F629 (U15). The firmware for this microcontroller is availabe from [Vintage Computer Federation AT2XT page](www.vcfed.org/forum/showthread.php?26426-AT2XT-keyboard-converter)
+
+### SPLD Fuse Maps
+
+An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, and implements Flash ROM write access. The fuse maps for the SPLD are provided in **SPLD** directory of this repository. The [SPLD/micro_8088_prod.jed](SPLD/micro_8088_prod.jed) fuse map should be used for production applications.
 
 ## Changes
 * Version 1.1
@@ -246,7 +255,7 @@ Micro 8088 integrates an AT2XT keyboard converter, implemented using PIC12F629 (
 
 ## TODO List
 * Version 1.1
-  - [ ] Build and test the board
+  - [x] Build and test the board
   - [ ] Debug the Xi 8088 BIOS
 * Version 1.0
   - [x] Test with 14.31818 MHz and 28.63636 MHz crystals
