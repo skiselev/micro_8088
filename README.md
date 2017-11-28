@@ -210,7 +210,7 @@ An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, a
 
 ### System BIOS
 
-Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) BIOS. The BIOS source code will be available in [8088_bios GitHub repository](https://github.com/skiselev/8088_bios)
+Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) BIOS. The BIOS binary images are provided in **BIOS** directory. The BIOS source code is available in [8088_bios GitHub repository](https://github.com/skiselev/8088_bios/tree/micro_8088)
 
 ### AT2XT Firmware
 
