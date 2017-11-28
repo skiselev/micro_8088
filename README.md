@@ -32,6 +32,8 @@ The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements
 
 ### Bill of Materials - Version 1.1
 
+[Project on Mouser.com](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=57e2f0df1d) - View and order all components except of the Faraday FE2010A chipset, and the PCB.
+
 Component type    	| Reference | Description                       | Quantity | Possible sources and notes 
 ------------------ | --------- | --------------------------------- | -------- | --------------------------
 PCB                |           | Micro 8080 PCB - Version 1.1      | 1        | Check availability on the [RetroBrew Computers Board Inventory](https://retrobrewcomputers.org/doku.php?id=boardinventory#xi_8088_project_sergey_kiselev) page, or order from a PCB manufacturer of your choice using provided Gerber or KiCad files
