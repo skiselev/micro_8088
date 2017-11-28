@@ -201,7 +201,21 @@ Port 63h bit | Function
   * When using 14.31818 MHz crystal (XSEL pin is pulled up), setting bit 7 switches CPU clock frequency to 4.77 MHz, regardless of bit 6
   * When using 14.31818 MHz crystal (XSEL pin is pulled up)
   * It appears that CPU clock duty cycle is 50% (excluding 4.77 MHz setting with 28.63636 MHz crystal, where duty cycle is 33%). This potentially can cause issues with some 8088 CPUs.
-  
+
+## Firmware Documentation
+
+### SPLD Fuse Maps
+
+An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, and implements Flash ROM write access. The fuse maps for the SPLD are provided in **SPLD** directory of this repository. The [SPLD/micro_8088_prod.jed](SPLD/micro_8088_prod.jed) fuse map should be used for production applications.
+
+### System BIOS
+
+Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) BIOS. The BIOS source code will be available in [8088_bios GitHub repository](https://github.com/skiselev/8088_bios)
+
+### AT2XT Firmware
+
+Micro 8088 integrates an AT2XT keyboard converter, implemented using PIC12F629 (U15). The firmware for this microcontroller is availabe from [Vintage Computer Federation AT2XT page](www.vcfed.org/forum/showthread.php?26426-AT2XT-keyboard-converter)
+
 ## Changes
 * Version 1.1
   * Recommend using 74F-series, and update the schematic and the silkscreen accordingly. 74F-series ICs are faster and slightly cheaper than 74ALS-series
