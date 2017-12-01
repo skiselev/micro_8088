@@ -11,7 +11,7 @@ The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements
 * Processor: Intel 8088 or compatible, NEC V20
   * Supports IBM PC/XT standard 4.77 MHz CPU frequency and, when using FE2010A chipset, 7.16 MHz and 9.54 MHz CPU frequencies
 * Coprocessor: Intel 8087
-* [Faraday FE2010/FE2010A](Documentation/Faraday-XT_Controller-FE2010.pdf) chipset, implementing the following components:
+* [Faraday FE2010/FE2010A](Documentation/Faraday-XT_Controller-FE2010A.md) chipset, implementing the following components:
   * One 8237 direct memory access controller (DMAC)
   * One 8259 programmable interrupt controller (PIC)
   * One 8254 programmable interval timer (PIT)
@@ -29,6 +29,12 @@ The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements
 [Schematic - Version 1.1](KiCad/8088-FE2010A-SBC-Schematic-1.1.pdf)
 
 [PCB Layout - Version 1.1](KiCad/8088-FE2010A-SBC-Board-1.1.pdf)
+
+### Faraday FE2010/FE2010A Information
+
+Please refer to [Faraday FE2010A document](Documentation/Faraday-XT_Controller-FE2010A.md) and [Faraday FE2010 datasheet](Documentation/Faraday-XT_Controller-FE2010.pdf) for detailed information about Faraday FE2010/FE2010A chipsets.
+
+*Note: CPU clock frequency switching (turbo mode) is only implemented in Faraday FE2010A chipset (not in FE2010).*
 
 ### Jumpers, Connectors, and Switches
 
@@ -165,43 +171,6 @@ Resistor           | R7        | 10 kohm, through hole             | 1        | 
 Resistor           | R8        | 1 Mohm, through hole              | 1        | Mouser [291-1M-RC](https://www.mouser.com/Search/ProductDetail.aspx?R=291-1M-RCvirtualkey21980000virtualkey291-1M-RC)
 ISA Bracket        |           | Keystone Electronics 9202         | 1        | Mouser [534-9202](https://www.mouser.com/Search/ProductDetail.aspx?R=9202virtualkey53400000virtualkey534-9202)
 Screw              |           | 4-40 x 1/4" Screw                 | 2        | Mouser [534-9900](https://www.mouser.com/Search/ProductDetail.aspx?R=9900virtualkey53400000virtualkey534-9900)
-
-
-### Faraday FE2010/FE2010A Specifics
-This section documents features and quirks that are specific to Micro 8088, and to
-Faraday FE2010 and FE2010A chipsets, and not present in standard IBM PC/XT.
-
-#### CPU Clock Frequency / Turbo Mode Switching
-This appears to be implemented only in Faraday FE2010A chipset (not in FE2010).
-* XSEL signal (pin 18) of FE2010A (U3) used to select between 14.31818 MHz and 28.63636 MHz crystal frequency.
-This signal should be pulled up for 14.31818 MHz and grounded for 28.63636 MHz. On Micro 8088 this signal is connected to JP2:
-JP2 should be OPEN for 14.31818 MHz and CLOSED for 28.63636 MHz.
-* Port 63h is used to select chipset configruation, including the CPU frequency:
-
-Port 63h bit | Function
------------- | --------
-0            | disable parity
-1            | 8087 present (enable 8087 NMI)
-2            | 256K RAM (1 bank)
-3            | lock register (bits 0-4)
-4            | 512K RAM size (2 banks)
-5            | memory wait states (on ISA bus)
-6            | 7.16 MHz CPU clock
-7            | 9.54 MHz CPU clock
-
-* According to the available documentation (Intel Wildcard 88 module, which appears to be using the same chipset):
-  * Bit 5 controls the number of wait states when accessing memory on ISA bus:
-    * Bit 5 == 0, 7.16 MHz CPU clock: 2 wait states
-    * Bit 5 == 0, 9.54 MHz CPU clock: 4 wait states
-    * Bit 5 == 1: 0 wait states, regardless of CPU clock
-    * On-board memory (that is memory in range 0x0000 - 0x9FFFF, first 640 KiB) always accessed with 0 wait states
-    * ROM memory (0xF0000h-0xFFFFF range) is always accessed with 0 wait states for 4.77 MHz, 2 wait states for 7.16 MHz clock, and 4 wait states for 9.54 MHz clock
-* Some findings from my tests:
-  * Setting bit 7 to 1 seems to override bit 6 value
-  * When using 28.63636 MHz crystal (XSEL pin is grounded), setting bit 7 switches CPU clock frequency to 9.54 MHz, regardless of bit 6
-  * When using 14.31818 MHz crystal (XSEL pin is pulled up), setting bit 7 switches CPU clock frequency to 4.77 MHz, regardless of bit 6
-  * When using 14.31818 MHz crystal (XSEL pin is pulled up)
-  * It appears that CPU clock duty cycle is 50% (excluding 4.77 MHz setting with 28.63636 MHz crystal, where duty cycle is 33%). This potentially can cause issues with some 8088 CPUs.
 
 ## Firmware Documentation
 
