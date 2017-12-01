@@ -1,9 +1,8 @@
 # Micro 8088
-IBM XT Compatible Processor Board based on Faraday FE2010 chipset
+IBM XT Compatible Processor Board based on Faraday FE2010/FE2010A chipset
 
 ## Introduction
-This project is an attempt to create a simple to build IBM PC/XT compatible processor board.
-The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements most of IBM PC/XT LSIs (Intel 8xxx ICs) and glue logic.
+Micro 8088 is an easy to build IBM PC/XT compatible processor board. It uses a fairly common Faraday FE2010/FE2010A chipset, that implements most of IBM PC/XT LSIs (Intel 8xxx ICs) and glue logic. Micro 8088 uses SRAM ICs to implement the system RAM, and a Flash ROM IC to store the BIOS, further reducing the number of components, and simplifying the build process.
 
 ![Micro 8088 V1.1 Assembled Board](images/Micro_8088_Assembled_Board-1.1.jpg)
 
@@ -32,7 +31,7 @@ The project uses a fairly common Faraday FE2010/FE2010A chipset, that implements
 
 ### Faraday FE2010/FE2010A Information
 
-Please refer to [Faraday FE2010A document](Documentation/Faraday-XT_Controller-FE2010A.md) and [Faraday FE2010 datasheet](Documentation/Faraday-XT_Controller-FE2010.pdf) for detailed information about Faraday FE2010/FE2010A chipsets.
+Please refer to [Faraday FE2010A documentation](Documentation/Faraday-XT_Controller-FE2010A.md) and [Faraday FE2010 datasheet](Documentation/Faraday-XT_Controller-FE2010.pdf) for detailed information about Faraday FE2010/FE2010A chipsets.
 
 *Note: CPU clock frequency switching (turbo mode) is only implemented in Faraday FE2010A chipset (not in FE2010).*
 
@@ -176,7 +175,7 @@ Screw              |           | 4-40 x 1/4" Screw                 | 2        | 
 
 ### System BIOS
 
-Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) BIOS. The BIOS binary images are provided in **BIOS** directory. The BIOS source code is available in [8088_bios GitHub repository](https://github.com/skiselev/8088_bios/tree/micro_8088)
+Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) BIOS. The BIOS binary images are provided in [BIOS](BIOS) directory. The BIOS source code is available in [8088_bios GitHub repository](https://github.com/skiselev/8088_bios/tree/micro_8088)
 
 #### Turbo Mode Switching
 
@@ -193,7 +192,7 @@ Micro 8088 integrates an AT2XT keyboard converter, implemented using PIC12F629 (
 
 ### SPLD Fuse Maps
 
-An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, and implements Flash ROM write access. The fuse maps for the SPLD are provided in **SPLD** directory of this repository. The [SPLD/micro_8088_prod.jed](SPLD/micro_8088_prod.jed) fuse map should be used for production applications.
+An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, and implements Flash ROM write access. The fuse maps for the SPLD are provided in [SPLD](SPLD) directory of this repository. The [SPLD/micro_8088_prod.jed](SPLD/micro_8088_prod.jed) fuse map should be used for production applications.
 
 ## Changes
 * Version 1.1
@@ -212,6 +211,7 @@ An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, a
 ## Known Issues
 * Version 1.1
   * JP2 description on the back silkscreen suggests that the default JP2 position is *Open*. Since the recommended chipset is FE2010A and the recommended crystal frequency is 28.63636 MHz, the default JP2 position should be *Closed*
+  * Update the silkscreen near ISA bracket mounting holes: The rectangles should be moved to the back silkscreen, and screw head sized circles should be shown on the front skilscreen
 * Version 1.0
   * System does not boot with NEC V20 CPU.
     * This is confirmed to be due to a Phoenix BIOS issue (BIOS image from Intel Wildcard 88)
