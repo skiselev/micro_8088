@@ -20,7 +20,7 @@ the [Faraday FE2010 datasheet](Documentation/Faraday-XT_Controller-FE2010.pdf).
 Faraday FE2010 only supports PC/XT standard 4.77 MHz CPU clock frequency using 14.31818 crystal oscillator.
 Faraday FE2010A can provide 4.77 MHz and 7.15 MHz CPU clock frequencies using 14.31818 MHz crystal oscillator,
 or 4.77 MHz, 7.15 MHz, and 9.54 MHz CPU clock frequencies using 28.63636 MHz crystal oscillator.
-Faraday FE2010A uses pin 16 (previously unused on FE2010) to indicate the crystal frequency as follows:
+Faraday FE2010A uses XSEL signal - pin 16 (previously unused on FE2010) to indicate the crystal frequency as follows:
 
 * 14.31818 MHz crystal oscillator - pin 16 pulled up, e.g. connected to +5V using a 4.7 kohm resistor
 * 28.63636 MHz crystal oscillator - pin 16 pulled down, e.g. connected to the ground
@@ -183,8 +183,15 @@ Configuration Register Bit 7 | Configuration Register Bit 6 | Configuration Regi
 0                            | 0                            | X                            | 4.77 MHz  | 1               | 0                           | 0
 0                            | 1                            | 0                            | 7.15 MHz  | 4               | 0                           | 2
 0                            | 1                            | 1                            | 7.15 MHz  | 4               | 0                           | 0
-1                            | X                            | 0                            | 9.54 MHz  | 6               | 0                           | 4
-1                            | X                            | 1                            | 9.54 MHz  | 6               | 0                           | 0
+1                            | 1*                           | 0                            | 9.54 MHz  | 6               | 0                           | 4
+1                            | 1*                           | 1                            | 9.54 MHz  | 6               | 0                           | 0
+
+Some findings from my tests:
+* Setting bit 7 to 1 seems to override bit 6 value
+* When using 28.63636 MHz crystal (XSEL pin is grounded), setting bit 7 switches CPU clock frequency to 9.54 MHz, regardless of bit 6
+* When using 14.31818 MHz crystal (XSEL pin is pulled up), setting bit 7 switches CPU clock frequency to 4.77 MHz, regardless of bit 6
+* When using 14.31818 MHz crystal (XSEL pin is pulled up)
+* It appears that CPU clock duty cycle is 50% (excluding 4.77 MHz setting with 28.63636 MHz crystal, where duty cycle is 33%). This potentially can cause issues with some 8088 CPUs.
 
 ### Counter/Timer Control
 
