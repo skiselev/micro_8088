@@ -227,12 +227,3 @@ An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, a
     * This is due to A8-A11 address lines not beight latched.
     * Workaround: add a 74F573 latch, and connect AA8-AA11 and A8-AA11 through it
 
-## TODO List
-* Version 1.1
-  - [x] Build and test the board
-  - [ ] Debug the Xi 8088 BIOS
-* Version 1.0
-  - [x] Test with 14.31818 MHz and 28.63636 MHz crystals
-  - [x] Test 512 KiB and 640 KiB memory configuration
-  - [x] Port Xi 8088 BIOS to Micro 8088
-  - [x] Test with CMOS buffers, latches, and transceivers
