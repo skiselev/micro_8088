@@ -29,6 +29,10 @@ Micro 8088 is an easy to build IBM PC/XT compatible processor board. It uses a f
 
 [PCB Layout - Version 1.1](KiCad/8088-FE2010A-SBC-Board-1.1.pdf)
 
+### Building Insturctions
+
+Please refer to [Building Instructions](Building_Instructions.md) page for detailed instructions.
+
 ### Faraday FE2010/FE2010A Information
 
 Please refer to [Faraday FE2010A documentation](Documentation/Faraday-XT_Controller-FE2010A.md) and [Faraday FE2010 datasheet](Documentation/Faraday-XT_Controller-FE2010.pdf) for detailed information about Faraday FE2010/FE2010A chipsets.
