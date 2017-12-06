@@ -101,13 +101,13 @@ Still, if needed it can be obtained on eBay. Intel D8087-1 is the recommended pa
   * Solder the R1-R8 resistors
   * Solder the X1 crystal. You might want to place a piece of a non-conductive plastic, e.g. a nylon washer between the crystal and the PCB
   * Solder the C1-C32 capacitors. Pay attention to the capacitors polarity if using polarized capacitors
-  * Solder the RR1-RR5 resistor arrays. Pay attention to the orientation - pin number 1 is usually marked with a dot on the resistor array. Square pads on the PCB used to mark the first pin
+  * Solder the RR1-RR5 resistor arrays. Pay attention to the orientation - pin number 1 is usually marked with a dot on the resistor array. Square pads on the PCB are used to mark the first pin
   * Solder all the DIP sockets - U1, U2, U4 - U16. Pay close attention to the orientation of the sockets
   * Solder the PLCC socket for U3. Pay close attention to the orientation of this socket
   * Solder the DIP switches SW2 and SW3
   * Solder the LED D2. Pay attention to the LED polarity. If using a regular 3 mm LED you might want to bend its leads at the right angle, so that it points towards, and sticks through the ISA bracket
   * Solder the Q1 transistor
-  * Solder the P2, P3, JP1 - JP4 headers. If using SPLD you don't need solder JP3 - JP4 headers, also if using 28.62626 MHz crystal, a wire jumper can be installed in place of the JP2 header, or it could be left unpopulated for 14.81313 MHz crystal
+  * Solder the P2, P3, JP1 - JP4 headers. If using SPLD you don't need solder JP3 - JP4 headers. Also if using 28.62626 MHz crystal, a wire jumper can be installed in place of the JP2 header, or it could be left unpopulated for 14.81313 MHz crystal
   * Solder the SW1 tactile button
   * Solder the P1 Mini DIN connector
   * Solder the SP1 speaker. Pay attention to the polarity
@@ -118,8 +118,8 @@ Still, if needed it can be obtained on eBay. Intel D8087-1 is the recommended pa
 8. If using SPLD, program it with this [fuse map](SPLD/micro_8088_prod.jed)
 9. Carefully install ICs into the sockets. Use a hard non-static surface to bend the pins of ICs in DIP packages as needed. Double check the orientation of the ICs. Make sure that all ICs pins are inserted into the sockets, and not bent. Note that FE2010A is installed upside down compared to other ICs.
 10. Inspect the completed board once again
-11. Install the configuration jumpers, and flip DIP switches as needed. Refer to the [Jumpers, Connectors, and Switches](README.md#jumpers-connectors-and-switches) section of the [README.md](README.md) file
-12. Drill the holes in the ISA bracket to match with the PS/2 Mini DIN connector, the reset switch, and the LED. Finish the holes with the file
+11. Install the configuration jumpers, and set the DIP switches as needed. Refer to the [Jumpers, Connectors, and Switches](README.md#jumpers-connectors-and-switches) section of the [README.md](README.md) file
+12. Drill the holes in the ISA bracket to match with the PS/2 Mini DIN connector, the reset switch, and the LED. Finish the holes with a file
 13. Attach the ISA bracket to the board using two 4-40 x 1/4" screws
 14. Install the Micro 8088 board and other ISA cards in the ISA backplane. Connect the power supply
 15. Turn on the power, test the board, install your favorite software, and enjoy!
@@ -127,13 +127,12 @@ Still, if needed it can be obtained on eBay. Intel D8087-1 is the recommended pa
 ## Troubleshooting Tips
 
 * Inspect your board for any soldering issues
-* Check the jumper and switches settings. Pay attention to SW3 switch settings, and make sure that the select UMB addresses do not conflict with BIOS extension ROMs. For example 0xC0000-0xC7FFF range is normally used by VGA BIOS, make sure that corresponding switch is turned off when using VGA card
-* Make sure that your system is getting the power, and that power voltage is within 5%-10% range from the nominal
+* Check the jumpers and the switches settings. Pay attention to the SW3 switch settings, and make sure that the selected UMB addresses do not conflict with BIOS extension ROMs. For example 0xC0000-0xC7FFF range is normally used by VGA BIOS, make sure that the corresponding switch is turned off when using VGA card
+* Make sure that your system is getting the power, and that power supply voltage is within 5%-10% range of the nominal voltage
 * Observe the system activity
-  * Any beep codes?
+  * Does it produce any beeping sounds?
   * Using multimeter with frequency measurement or an oscilloscope check for pulses on the key processor and chipset signals:
     * OSC, and CLK (CPU clock) signals
     * AD0 signal on the CPU, A0 signal on ISA bus
     * /MEMR, /MEMW, /IOR, /IOW signals on ISA bus
   * Using an ISA POST card or a backplane with a POST display, check if system outputs any POST codes. If so, is there any particular code it is getting stuck on?
-  
