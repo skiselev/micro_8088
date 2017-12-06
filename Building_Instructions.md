@@ -49,7 +49,7 @@ Still, if needed it can be obtained on eBay. Intel D8087-1 is the recommended pa
   * 8 MHz 8088-2, 80C88-2, and NEC V20 (μPD70108C-8) parts might work as well
 * The recommended SPLD is Atmel ATF16V8B. It can be replaced with Lattice GAL16V8D or similar
   * Make sure that your programmer supports the SPLD type you're planning to use
-  * Note that SPLD part is optional, and a 74F00 logic IC can be used instead. See the [Optional Components](Documentation/Building_Instructions.md#optional-components) section below.
+  * Note that SPLD part is optional, and a 74F00 logic IC can be used instead. See the [Optional Components](#optional-components) section below.
 * The recommended Flash ROM part is Microchip SST39SF010A
   * Other 128 KiB, 5V-only Flash ROM ICs can be used, for example Atmel AT29C010, Winbond W29EE011, Greenliant GLS29EE010, AMD Am29F010B
 * The recommended SRAM part is Alliance Memory AS6C4008-55PCN
