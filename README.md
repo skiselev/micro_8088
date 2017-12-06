@@ -172,6 +172,7 @@ Resistor           | R4, R5    | 470 ohm, through hole             | 2        | 
 Resistor           | R6        | 1 kohm, through hole              | 1        | Mouser [291-1K-RC](https://www.mouser.com/Search/ProductDetail.aspx?R=291-1K-RCvirtualkey21980000virtualkey291-1K-RC)
 Resistor           | R7        | 10 kohm, through hole             | 1        | Mouser [291-10K-RC](https://www.mouser.com/Search/ProductDetail.aspx?R=291-10K-RCvirtualkey21980000virtualkey291-10K-RC)
 Resistor           | R8        | 1 Mohm, through hole              | 1        | Mouser [291-1M-RC](https://www.mouser.com/Search/ProductDetail.aspx?R=291-1M-RCvirtualkey21980000virtualkey291-1M-RC)
+Fuse               | F1        | 1.1A polyfuse, 5.08 mm lead pitch | 1        | Mouser [576-16R110BPR](https://www.mouser.com/Search/ProductDetail.aspx?R=16R110BPRvirtualkey57610000virtualkey576-16R110BPR)
 ISA Bracket        |           | Keystone Electronics 9202         | 1        | Mouser [534-9202](https://www.mouser.com/Search/ProductDetail.aspx?R=9202virtualkey53400000virtualkey534-9202)
 Screw              |           | 4-40 x 1/4" Screw                 | 2        | Mouser [534-9900](https://www.mouser.com/Search/ProductDetail.aspx?R=9900virtualkey53400000virtualkey534-9900)
 

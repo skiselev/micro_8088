@@ -109,6 +109,7 @@ Still, if needed it can be obtained on eBay. Intel D8087-1 is the recommended pa
   * Solder the Q1 transistor
   * Solder the P2, P3, JP1 - JP4 headers. If using SPLD you don't need solder JP3 - JP4 headers. Also if using 28.62626 MHz crystal, a wire jumper can be installed in place of the JP2 header, or it could be left unpopulated for 14.81313 MHz crystal
   * Solder the SW1 tactile button
+  * Solder the F1 polyfuse
   * Solder the P1 Mini DIN connector
   * Solder the SP1 speaker. Pay attention to the polarity
 4. Carefully inspect all the solder joints. Re-solder if needed. Optionally use a multimeter to check the board for short-circuits, and for the power supply signals connectivity
