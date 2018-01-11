@@ -183,14 +183,12 @@ Configuration Register Bit 7 | Configuration Register Bit 6 | Configuration Regi
 0                            | 0                            | X                            | 4.77 MHz  | 1               | 0                           | 0
 0                            | 1                            | 0                            | 7.15 MHz  | 4               | 0                           | 2
 0                            | 1                            | 1                            | 7.15 MHz  | 4               | 0                           | 0
-1                            | 0                            | 0                            | 9.54 MHz  | 6               | 0                           | 4*
-1                            | 1                            | 0                            | 9.54 MHz  | 6               | 0                           | 4 (need to test)
-1                            | 0                            | 1                            | 9.54 MHz  | 6               | 0                           | 2*
+1                            | 0                            | 0                            | 9.54 MHz  | 6               | 0                           | 4 (test measurements)
+1                            | 1                            | 0                            | 9.54 MHz  | 6               | 0                           | 2 (test measurements)
+1                            | 0                            | 1                            | 9.54 MHz  | 6               | 0                           | 0 (need to test)
 1                            | 1                            | 1                            | 9.54 MHz  | 6               | 0                           | 0
 
-*Note 1: The configuration with bit 7 set to 1 and bit 6 set to 0 is not documented. The indicated wait state numbers are measurements from my tests.*
-
-*Note 2: It appears that when running at 9.54 MHz, the CPU clock duty cycle is 50% (instead of 33%). This potentially can cause issues with some 8088 CPUs.*
+*Note: It appears that when running at 9.54 MHz, the CPU clock duty cycle is 50% (instead of 33%). This potentially can cause issues with some 8088 CPUs.*
 
 ### Counter/Timer Control
 
