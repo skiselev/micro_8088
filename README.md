@@ -28,6 +28,8 @@ Micro 8088 is an easy to build IBM PC/XT compatible processor board. It uses a f
 [Schematic - Version 1.1](KiCad/8088-FE2010A-SBC-Schematic-1.1.pdf)
 
 [PCB Layout - Version 1.1](KiCad/8088-FE2010A-SBC-Board-1.1.pdf)
+[PCB Layout - Version 1.2](KiCad/8088-FE2010A-SBC-Board-1.2.pdf)
+[PCB Layout - Version 1.3](KiCad/8088-FE2010A-SBC-Board-1.3.pdf)
 
 ### Building Insturctions
 
@@ -121,14 +123,14 @@ SW3.5 = ON | Map 0xE0000-0xEFFFF to RAM
 
 *Note: SPLD (U16) is required to implement UMBs. This switch is not used in systems without SPLD*
 
-### Bill of Materials - Version 1.1
+### Bill of Materials - Versions 1.1, 1.2, and 1.3
 
 [Micro 8088 project on Mouser.com](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=57e2f0df1d) - View and order all components except of the Faraday FE2010A chipset, and the PCB.
 [Micro 8088 project on OSH Park](https://oshpark.com/shared_projects/xbWzfre6) - View and order the PCB.
 
 Component type    	| Reference | Description                       | Quantity | Possible sources and notes 
 ------------------ | --------- | --------------------------------- | -------- | --------------------------
-PCB                |           | Micro 8080 PCB - Version 1.1      | 1        | Refer to the [RetroBrew Computers Board Inventory](https://retrobrewcomputers.org/doku.php?id=boardinventory#xi_8088_project_sergey_kiselev) page for ordering information, or order from a PCB manufacturer of your choice using provided Gerber or KiCad files
+PCB                |           | Micro 8080 PCB - Version 1.1, 1.2, or 1.3 | 1        | Refer to the [RetroBrew Computers Board Inventory](https://retrobrewcomputers.org/doku.php?id=boardinventory#xi_8088_project_sergey_kiselev) page for ordering information, or order from a PCB manufacturer of your choice using provided Gerber or KiCad files
 Integrated Circuit | U1        | Intel 8088, 80C88, or NEC V20 CPU | 1        | eBay, Mouser (expensive) - [968-IP80C88-2](https://www.mouser.com/Search/ProductDetail.aspx?R=IP80C88-2virtualkey57760000virtualkey968-IP80C88-2)
 Integrated Circuit | U2        | Intel 8087 FPU                    | 1        | Optional, eBay
 Integrated Circuit | U3        | Faraday FE2010A                   | 1        | eBay
