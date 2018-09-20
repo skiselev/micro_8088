@@ -28,7 +28,9 @@ Micro 8088 is an easy to build IBM PC/XT compatible processor board. It uses a f
 [Schematic - Version 1.1](KiCad/8088-FE2010A-SBC-Schematic-1.1.pdf)
 
 [PCB Layout - Version 1.1](KiCad/8088-FE2010A-SBC-Board-1.1.pdf)
+
 [PCB Layout - Version 1.2](KiCad/8088-FE2010A-SBC-Board-1.2.pdf)
+
 [PCB Layout - Version 1.3](KiCad/8088-FE2010A-SBC-Board-1.3.pdf)
 
 ### Building Insturctions
