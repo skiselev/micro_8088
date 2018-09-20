@@ -96,7 +96,7 @@ Still, if needed it can be obtained on eBay. Intel D8087-1 is the recommended pa
 
 1. Inspect the PCB for obvious defects, such as deep scratches or short-circuits between traces
 2. Clean the PCB with an alcohol wipe
-3. Solder the components, going for lower profile to higher profile
+3. Solder the components, going from lower profile components to higher profile ones
   * Form the leads and solder the D1 diode. Pay attention to the diode's polarity (the black band on the diode should match the band on the silkscreen)
   * Solder the R1-R8 resistors
   * Solder the X1 crystal. You might want to place a piece of a non-conductive plastic, e.g. a nylon washer between the crystal and the PCB
