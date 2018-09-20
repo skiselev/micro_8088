@@ -226,9 +226,6 @@ An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, a
   * JP2 description on the back silkscreen suggests that the default JP2 position is *Open*. Since the recommended chipset is FE2010A and the recommended crystal frequency is 28.63636 MHz, the default JP2 position should be *Closed*
   * Update the silkscreen near ISA bracket mounting holes: The rectangles should be moved to the back silkscreen, and screw head sized circles should be shown on the front skilscreen
 * Version 1.0
-  * System does not boot with NEC V20 CPU.
-    * This is confirmed to be due to a Phoenix BIOS issue (BIOS image from Intel Wildcard 88)
-    * Xi 8088 BIOS is currently work in progress, and it doesn't suffer from this issue
   * AS6C1008 (U6) does not have TTL compatible inputs causing instability with 640 KiB memory configruation
     * Workaround: use CMOS transceiver U11, e.g. 74AHCT245
   * DMA doesn't work properly.
