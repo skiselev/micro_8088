@@ -200,6 +200,11 @@ Micro 8088 integrates an AT2XT keyboard converter, implemented using PIC12F629 (
 An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, and implements Flash ROM write access. The fuse maps for the SPLD are provided in [SPLD](SPLD) directory of this repository. The [SPLD/micro_8088_prod.jed](SPLD/micro_8088_prod.jed) fuse map should be used for production applications.
 
 ## Changes
+* Version 1.3
+  * Update silkscreen:
+    * SW2.3 - fix the description for the *ON* position
+    * Add a warning about installing either U14 or U16, but not both
+    * Update board version to 1.3
 * Version 1.2
   * Update silkscreen:
     * JP2 - change the default to *Closed*
@@ -222,6 +227,8 @@ An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, a
   * Initial version
 
 ## Known Issues
+* Version 1.2
+  * SW2.3 description on the back silkscreen incorrectly references SW1.3 for the *ON* position
 * Version 1.1
   * JP2 description on the back silkscreen suggests that the default JP2 position is *Open*. Since the recommended chipset is FE2010A and the recommended crystal frequency is 28.63636 MHz, the default JP2 position should be *Closed*
   * Update the silkscreen near ISA bracket mounting holes: The rectangles should be moved to the back silkscreen, and screw head sized circles should be shown on the front skilscreen
