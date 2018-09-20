@@ -200,6 +200,14 @@ Micro 8088 integrates an AT2XT keyboard converter, implemented using PIC12F629 (
 An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, and implements Flash ROM write access. The fuse maps for the SPLD are provided in [SPLD](SPLD) directory of this repository. The [SPLD/micro_8088_prod.jed](SPLD/micro_8088_prod.jed) fuse map should be used for production applications.
 
 ## Changes
+* Version 1.2
+  * Update silkscreen:
+    * JP2 - change the default to *Closed*
+    * Bracket - move rectangles to the back side, add circles around mounting holes on the front side
+    * Remove the line around ISA connector
+    * Use KiCad OSHW logo
+    * Update copyright years to 2017-2018
+    * Update board version to 1.2
 * Version 1.1
   * Recommend using 74F-series, and update the schematic and the silkscreen accordingly. 74F-series ICs are faster and slightly cheaper than 74ALS-series
   * Add 74F573 latch for latching A8-A11 signals. This fixes the DMA issue
