@@ -33,7 +33,7 @@ using [Gerber](gerber) or [KiCad](KiCad) files provided in this GitHub repositor
 Faraday FE2010A chip is available from a few sellers on eBay, and can be also obtained from some Chinese IC distributors.
 
 The 8088 processor is no longer manufactured, but still can be obtained from several sources.
-It can be replaced with CMOS version - 80C88, which is still manufactured by [Intersil](https://www.intersil.com/en/products/space-and-harsh-environment/harsh-environment/microprocessors-and-peripherals/80C88.html).
+It can be replaced with CMOS version - 80C88, which is still manufactured by [Renesas/Intersil](https://www.renesas.com/us/en/products/space-harsh-environment/harsh-environment/microprocessors-peripherals/device/80C88.html).
 Alternatively NEC V20 CPU can be used, this CPU is slightly faster than the original 8088, and supports 80186+ instruction set.
 
 The 8087 math coprocessor is an optional component. Not many programs use it, and not many PCs/XTs and compatible computers in 1980's had it installed.
