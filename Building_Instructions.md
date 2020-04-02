@@ -100,7 +100,7 @@ Still, if needed it can be obtained on eBay. Intel D8087-1 is the recommended pa
   * Form the leads and solder the D1 diode. Pay attention to the diode's polarity (the black band on the diode should match the band on the silkscreen)
   * Solder the R1-R8 resistors
   * Solder the X1 crystal. You might want to place a piece of a non-conductive plastic, e.g. a nylon washer between the crystal and the PCB
-  * Solder the C1-C32 capacitors. Pay attention to the capacitors polarity if using polarized capacitors
+  * Solder the C1-C23 capacitors. Pay attention to the capacitors polarity if using polarized capacitors
   * Solder the RR1-RR5 resistor arrays. Pay attention to the orientation - pin number 1 is usually marked with a dot on the resistor array. Square pads on the PCB are used to mark the first pin
   * Solder all the DIP sockets - U1, U2, U4 - U16. Pay close attention to the orientation of the sockets
   * Solder the PLCC socket for U3. Pay close attention to the orientation of this socket
