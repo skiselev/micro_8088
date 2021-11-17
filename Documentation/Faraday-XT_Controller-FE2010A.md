@@ -127,7 +127,7 @@ The switch values (bits 0 - 3) depend on the Switch Select bit (bit 2) setting i
 
 Data Bit | Function with Switch Select = 0
 ---------|-----------------
-0 - 1    | VID0 and VID0 pins (SW5 and SW6 values)
+0 - 1    | VID0 and VID1 pins (SW5 and SW6 values)
 2 - 3    | Number of Floppies, as written to bits 6 - 7 of this register (SW7 - SW8 values)
 4        | Timer 2 Output
 5        | Timer 2 Output
