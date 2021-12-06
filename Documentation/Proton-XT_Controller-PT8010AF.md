@@ -29,6 +29,6 @@ but it never reads port 0x41, so the refresh should remain disabled. Perhaps PT8
 It appears that Proton PT8010AF samples IORDY input later than Faraday FE2010A does. The difference in behaviour in my case is observable when running a Micro 8088 system
 with a Trident TVGA9000i card, in the 9.54 MHz Turbo mode, with zero memory wait states (port 0x63 - Chipset Configuration Register, bits 7 and 5 set to 1).
 In this case with a FE2010A, I observe glitches on video output, apparently resulting from the chipset ignoring VGA controller IO_CH_RDY requests to insert wait cycles
-(video controllers almost always insert wait cycles when accessing video memory), while with Proton PT8010A there are no glitches and wait states are inserted correctly.
+(video controllers almost always insert wait cycles when accessing video memory), while with Proton PT8010AF there are no glitches and wait states are inserted correctly.
 I suspect that there is a difference in the time when IORDY is sampled, and perhaps Proton PT8010AF samples it a bit later, giving VGA controller an opportunity to activate it
 before it gets sampled.
