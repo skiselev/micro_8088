@@ -135,7 +135,7 @@ Component type    	| Reference | Description                       | Quantity | 
 PCB                |           | Micro 8080 PCB - Version 1.1, 1.2, or 1.3 | 1        | Refer to the [RetroBrew Computers Board Inventory](https://retrobrewcomputers.org/doku.php?id=boardinventory#xi_8088_project_sergey_kiselev) page for ordering information, or order from a PCB manufacturer of your choice using provided Gerber or KiCad files
 Integrated Circuit | U1        | Intel 8088, 80C88, or NEC V20 CPU | 1        | eBay, Mouser (expensive) - [968-CP80C88-2Z](https://www.mouser.com/ProductDetail/968-CP80C88-2Z)
 Integrated Circuit | U2        | Intel 8087 FPU                    | 1        | Optional, eBay
-Integrated Circuit | U3        | Faraday FE2010A                   | 1        | eBay
+Integrated Circuit | U3        | Faraday FE2010A                   | 1        | eBay, can be replaced with [Proton PT8010AF](https://github.com/skiselev/micro_8088/blob/master/Documentation/Proton-XT_Controller-PT8010AF.md)
 Integrated Circuit | U4        | SST39SF010A Flash ROM, DIP-32 package | 1    | Mouser [804-39SF010A7CPHE](https://www.mouser.com/ProductDetail/804-39SF010A7CPHE)
 Integrated Circuit | U5, U6    | AS6C4008 SRAM, DIP-32 package     | 2        | Mouser [913-AS6C4008-55PCN](https://www.mouser.com/ProductDetail/913-AS6C4008-55PCN)
 Integrated Circuit | U7 - U9   | 74F573 Octal D-Type Latch         | 3        | Mouser [595-SN74F573N](https://www.mouser.com/ProductDetail/595-SN74F573N)
