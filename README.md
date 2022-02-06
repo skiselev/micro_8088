@@ -191,7 +191,7 @@ Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/serg
 The BIOS keyboard handler uses the following key combinations to switch the CPU clock frequency:
 * **Ctrl-Alt-Keypad -** - Normal 4.77 MHz CPU clock frequency
 * **Ctrl-Alt-Keypad \*** - Turbo 7.16 MHz CPU clock frequency
-* **Ctrl-Alt-Keypad +** - Turbo 9.55 MHz CPU clock frequency (works only on systems with 26.63636 MHz X1 crystal)
+* **Ctrl-Alt-Keypad +** - Turbo 9.55 MHz CPU clock frequency (works only on systems with 28.63636 MHz X1 crystal)
 
 Note that the BIOS does not, and possibly can not check if the installed CPU and the FPU are actually capable of running at higher clock frequencies. Turning on the turbo mode in a system with 5 MHz CPU can make it unstable.
 
@@ -240,6 +240,6 @@ An optional ATF16V8/GAL16V8 SPLD (U16) allows using spare SRAM space for UMBs, a
   * AS6C1008 (U6) does not have TTL compatible inputs causing instability with 640 KiB memory configruation
     * Workaround: use CMOS transceiver U11, e.g. 74AHCT245
   * DMA doesn't work properly.
-    * This is due to A8-A11 address lines not beight latched.
+    * This is due to A8-A11 address lines not being latched.
     * Workaround: add a 74F573 latch, and connect AA8-AA11 and A8-AA11 through it
 
