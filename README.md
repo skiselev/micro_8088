@@ -184,7 +184,7 @@ Screw              |           | 4-40 x 1/4" Screw                 | 2        | 
 
 ### System BIOS
 
-Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) BIOS. The BIOS binary images are provided in [BIOS](BIOS) directory. The BIOS source code is available in [8088_bios GitHub repository](https://github.com/skiselev/8088_bios/tree/micro_8088)
+Micro 8088 uses a modified version of [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) BIOS. The BIOS binary images are provided in [BIOS](BIOS) directory. The BIOS source code is available in [8088_bios GitHub repository](https://github.com/skiselev/8088_bios)
 
 #### Turbo Mode Switching
 
