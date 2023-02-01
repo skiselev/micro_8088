@@ -179,14 +179,14 @@ Configuration Register Bit 4 | Configuration Register Bit 2 | Memory Banks | On 
 #### CPU Clock Frequency and Wait States
 
 Configuration Register Bit 7 | Configuration Register Bit 6 | Configuration Register Bit 5 | CPU Speed | I/O Wait States | On Board Memory Wait States | Memory Bus Wait States
------------------------------|------------------------------|------------------------------|-----------|-----------------|-----------------------------|-----------------------
+-----------------------------|------------------------------|------------------------------|-----------|-----------------|-----------------------------|----------------------- 
 0                            | 0                            | X                            | 4.77 MHz  | 1               | 0                           | 0
 0                            | 1                            | 0                            | 7.15 MHz  | 4               | 0                           | 2
 0                            | 1                            | 1                            | 7.15 MHz  | 4               | 0                           | 0
-1                            | 0                            | 0                            | 9.54 MHz  | 6               | 0                           | 4 (test measurements)
-1                            | 1                            | 0                            | 9.54 MHz  | 6               | 0                           | 2 (test measurements)
-1                            | 0                            | 1                            | 9.54 MHz  | 6               | 0                           | 0 (need to test)
-1                            | 1                            | 1                            | 9.54 MHz  | 6               | 0                           | 0
+1                            | 0                            | 0                            | 9.54 MHz  | 6               | 0                           | 4
+1                            | 1                            | 0                            | 9.54 MHz  | 4               | 0                           | 2
+1                            | 0                            | 1                            | 9.54 MHz  | 6               | 0                           | 0
+1                            | 1                            | 1                            | 9.54 MHz  | 4               | 0                           | 0
 
 *Note: It appears that when running at 9.54 MHz, the CPU clock duty cycle is 50% (instead of 33%). This potentially can cause issues with some 8088 CPUs.*
 
