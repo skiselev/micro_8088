@@ -13,20 +13,22 @@ Proton PT8010AF will work instead of Faraday FE2010A in a Micro 8088 system. I h
 
 ## Differences between Proton PT8010AF and Faraday FE2010A
 
-During my testing so far I found two differences between Proton PT8010AF and Faraday FE2010A documented below.
+During my testing so far, I found two differences between Proton PT8010AF and Faraday FE2010A documented below.
 
 ### DRAM Refresh
 
-In a Micro 8088 system, running [Micro 8088 BIOS Version 0.9.8](https://github.com/skiselev/8088_bios), it appears that DRAM refresh is enabled by default on Proton PT8010AF,
-while it is disabled on Faraday FE2010A. Since DRAM refresh inserts DMA cycles, it slows down the system. My measurements show up to 15% slowdown. Note that the Micro 8088 uses SRAM memory, so the memory does not need to be refreshed.
+Both chipsets implement IBM PC/XT compatible memory refresh using 8253 PIT Channel 1. DRAM refresh inserts DMA cycles, so it slows down the system. My measurements show up to 15% slowdown. In both chipsets it is possible to disable the DRAM refresh if it is not needed, for example in systems like Micro 8088, that use SRAM. 
 
-It appears that in both chipsets, the DRAM refresh is disabled by **writting** port 0x43 (8254 PIT Control Register) and selecting channel 1,
-and enabled by **reading** port 0x41 (8254 PIT Channel 1 Register). The weird thing is that the BIOS **writes** port 0x43, and then **writes** port 0x41,
-but it never reads port 0x41, so the refresh should remain disabled. Perhaps PT8010AF also uses 0x41 port write to enable the refresh?
+It appears that in both chipsets, the refresh is disabled by writing **0x54** to port **0x43** (PIT control register). And it enabled by a consecutive write to port **0x41** (PIT Channel 1), typically, the value written is **0x12**, which results in a 15 usec refresh interval - same as on IBM PC/XT.
+
+There are a few differences in behavior of the PIT registers between Faraday FE2010A and Proton PT8010AF:
+
+* When refresh is enabled, on PT8010AF, reads from **0x41** (PIT Channel 1, should result in current counter content) return numbers from **0x00** to **0x0F** (perhaps higher numbers too, theoretically should be in **0x00** to **0x11** interval), while on FE2010A such reads seem to result in either **0x10** or **0x05**.
+* When refresh is enabled, on FE2010A, writing **0x40** to port **0x54** results in disabling refresh. Consecutive reads from **0x41** will result in **0x12** value, while on PT8010AF, writing **0x40** to port **0x54** does not disable refresh
 
 ### IORDY Timing
 
-It appears that Proton PT8010AF samples IORDY input later than Faraday FE2010A does. The difference in behaviour in my case is observable when running a Micro 8088 system
+It appears that Proton PT8010AF samples IORDY input later than Faraday FE2010A does. The difference in behavior in my case is observable when running a Micro 8088 system
 with a Trident TVGA9000i card, in the 9.54 MHz Turbo mode, with zero memory wait states (port 0x63 - Chipset Configuration Register, bits 7 and 5 set to 1).
 In this case with a FE2010A, I observe glitches on video output, apparently resulting from the chipset ignoring VGA controller IO_CH_RDY requests to insert wait cycles
 (video controllers almost always insert wait cycles when accessing video memory), while with Proton PT8010AF there are no glitches and wait states are inserted correctly.
