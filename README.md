@@ -197,7 +197,7 @@ Note that the BIOS does not, and possibly can not check if the installed CPU and
 
 ### AT2XT Firmware
 
-Micro 8088 integrates an AT2XT keyboard converter, implemented using PIC12F629 (U15). The firmware for this microcontroller is availabe from [Vintage Computer Federation AT2XT page](https://forum.vcfed.org/index.php?threads/at-to-xt-keyboard-converter.16050/post-304769). The HEX file with the firmware can be extracted from XTATKEY_094.zip.
+Micro 8088 integrates an AT2XT keyboard converter, implemented using PIC12F629 (U15). The firmware for this microcontroller is availabe from [Vintage Computer Federation AT2XT page](https://forum.vcfed.org/index.php?threads/at2xt-keyboard-converter.26861/page-4#post-1242916). The HEX file with the firmware can be extracted from XTATKEY_094.zip.
 
 ### SPLD Fuse Maps
 
